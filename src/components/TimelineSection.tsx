@@ -7,6 +7,7 @@ interface TimelinePhase {
   description: string;
   icon: React.ReactNode;
   accent: string;
+  imageUrl: string;
 }
 
 const timelineData: TimelinePhase[] = [
@@ -16,6 +17,7 @@ const timelineData: TimelinePhase[] = [
     description: "Pertemuan pertama kita di SMA. Saat mata kita bertemu untuk pertama kalinya, aku tahu ada sesuatu yang istimewa. Kamu mengubah hariku menjadi lebih berwarna.",
     icon: <GraduationCap size={24} />,
     accent: "from-rose-blush to-rose-soft",
+    imageUrl: "/foto-tahun-1.jpg",
   },
   {
     year: "Tahun 2",
@@ -23,6 +25,7 @@ const timelineData: TimelinePhase[] = [
     description: "Kenangan-kenangan indah mulai terukir. Kita belajar memahami satu sama lain, berbagi tawa dan air mata. Setiap momen bersamamu adalah pelajaran berharga.",
     icon: <Sparkles size={24} />,
     accent: "from-lavender to-lavender-soft",
+    imageUrl: "/foto-tahun-2.jpg",
   },
   {
     year: "Tahun 3",
@@ -30,6 +33,7 @@ const timelineData: TimelinePhase[] = [
     description: "Komitmen kita semakin kuat. Kita melewati badai bersama dan menjadi lebih dewasa. Cintaku padamu tumbuh lebih dalam setiap harinya.",
     icon: <Star size={24} />,
     accent: "from-gold-soft to-cream",
+    imageUrl: "/foto-tahun-3.jpg",
   },
   {
     year: "Tahun 4",
@@ -37,6 +41,7 @@ const timelineData: TimelinePhase[] = [
     description: "Empat tahun yang penuh warna. Kita telah melewati begitu banyak hal bersama. Terima kasih telah menjadi bagian terindah dalam hidupku.",
     icon: <Heart size={24} />,
     accent: "from-rose-deep/20 to-primary/20",
+    imageUrl: "/foto-tahun-4.jpg",
   },
   {
     year: "Masa Depan",
@@ -44,6 +49,7 @@ const timelineData: TimelinePhase[] = [
     description: "Komitmenku untuk membangun masa depan bersamamu. Aku ingin menghabiskan sisa hidupku denganmu, membangun rumah tangga yang penuh cinta dan kebahagiaan.",
     icon: <Home size={24} />,
     accent: "from-primary/30 to-lavender/30",
+    imageUrl: "/foto-tahun-md.jpg",
   },
 ];
 
@@ -119,10 +125,16 @@ const TimelineSection = () => {
                   </p>
                   
                   {/* Photo placeholder */}
-                  <div className="aspect-video rounded-xl bg-rose-soft/50 border-2 border-dashed border-primary/20 flex items-center justify-center">
-                    <span className="text-sm text-muted-foreground">
-                      📷 Foto {phase.year}
-                    </span>
+                  <div className="aspect-video rounded-xl overflow-hidden shadow-md border border-primary/10 bg-white">
+                    <img 
+                      src={phase.imageUrl} 
+                      alt={phase.title}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      onError={(e) => {
+                        // Fallback jika gambar gagal dimuat
+                        e.currentTarget.src = "https://placehold.co/600x400?text=Foto+Kenangan";
+                      }}
+                    />
                   </div>
                 </motion.div>
               </div>
