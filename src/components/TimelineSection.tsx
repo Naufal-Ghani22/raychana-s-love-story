@@ -17,7 +17,7 @@ const timelineData: TimelinePhase[] = [
     description: "Pertemuan pertama kita di SMA. Saat mata kita bertemu untuk pertama kalinya, aku tahu ada sesuatu yang istimewa. Kamu mengubah hariku menjadi lebih berwarna.",
     icon: <GraduationCap size={24} />,
     accent: "from-rose-blush to-rose-soft",
-    imageUrl: "/Screenshot%202025-12-27%20153914.png",
+    imageUrl: "/Screenshot 2025-12-27 153914.png",
   },
   {
     year: "Tahun 2",
