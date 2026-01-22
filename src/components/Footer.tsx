@@ -13,16 +13,16 @@ const Footer = () => {
         >
           <div className="flex items-center justify-center gap-2 mb-4">
             <Heart className="text-primary" size={20} fill="currentColor" />
-            <span className="font-display text-lg text-foreground">R & Z</span>
+            <span className="font-display text-lg text-foreground">LOVE U</span>
             <Heart className="text-primary" size={20} fill="currentColor" />
           </div>
           
           <p className="text-sm text-muted-foreground font-body mb-2">
-            Dibuat dengan penuh cinta untuk Raychana Maharani Zahra
+            Dibuat oleh Naufal untuk Raychana Maharani Zahra
           </p>
           
           <p className="text-xs text-muted-foreground/70 font-body">
-            4 Tahun Bersama • 2 Februari 2025
+            Celamat Ulang Tahun Bubbbbb... • 2 Februari 2025
           </p>
         </motion.div>
       </div>
