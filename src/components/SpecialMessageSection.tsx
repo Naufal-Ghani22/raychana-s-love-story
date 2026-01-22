@@ -83,24 +83,20 @@ const SpecialMessageSection = () => {
               whileHover={{ y: -8, scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setSelectedMessage(index)}
-              className="card-romantic rounded-2xl p-6 cursor-pointer group text-center"
+              className="card-romantic rounded-2xl p-6 cursor-pointer text-center border-2 border-transparent hover:border-rose-soft hover:shadow-lg transition-all duration-300 relative overflow-hidden"
             >
               <motion.span
-                className="text-4xl md:text-5xl block mb-4"
-                whileHover={{ scale: 1.2, rotate: 10 }}
+                className="text-4xl md:text-5xl block mb-4 pointer-events-none"
+                animate={{ scale: 1 }}
               >
                 {message.icon}
               </motion.span>
-              <h3 className="font-display font-semibold text-foreground text-sm md:text-base mb-2">
+              <h3 className="font-display font-semibold text-foreground text-sm md:text-base mb-2 pointer-events-none">
                 {message.title}
               </h3>
-              <p className="text-xs text-muted-foreground font-body">
+              <p className="text-xs text-muted-foreground font-body pointer-events-none">
                 Klik untuk buka
               </p>
-              
-              <motion.div
-                className="absolute inset-0 rounded-2xl border-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity"
-              />
             </motion.div>
           ))}
         </div>
