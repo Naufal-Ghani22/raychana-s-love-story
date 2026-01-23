@@ -33,7 +33,7 @@ const timelineData: TimelinePhase[] = [
     description: "Komitmen kita semakin kuwatt. Badai hujan deras angin ribut kita lalui bersama dan menjadi lebih dewasa. Cintaku ke kamuu tumbuh lebih dalam setiap harinya.",
     icon: <Star size={24} />,
     accent: "from-gold-soft to-cream",
-    imageUrl: "/Photo-Tahun/Photo-2024.png",
+    imageUrl: "/Photo-Tahun/Photo 2024.HEIC",
   },
   {
     year: "Tahun 4",
@@ -41,7 +41,7 @@ const timelineData: TimelinePhase[] = [
     description: "Tahun dimana kita sudah terbiasa dengan pertengkaran. Banyak cerita yang kita lalui bersama. Terima kasih telah menjadi bagian yg sangaatttt terindahh dalam hidupkuuu.",
     icon: <Heart size={24} />,
     accent: "from-rose-deep/20 to-primary/20",
-    imageUrl: "/Photo-Tahun/Photo-2025.png",
+    imageUrl: "/Photo-Tahun/Photo 2025.HEIC",
   },
   {
     year: "Masa Depan",
