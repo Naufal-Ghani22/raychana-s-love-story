@@ -156,14 +156,18 @@ const HeroSection = () => {
             <div className="relative">
               {/* Photo container */}
               <motion.div
-                className="w-64 h-80 md:w-80 md:h-96 lg:w-96 lg:h-[500px] rounded-3xl bg-white/10 backdrop-blur-sm border-2 border-white/20 flex items-center justify-center overflow-hidden"
-                whileHover={{ scale: 1.02 }}
-              >
-                <div className="text-center text-white/60 font-body">
-                  <Heart size={48} className="mx-auto mb-4 opacity-50" />
-                  <p className="text-sm">Foto Raychana</p>
-                  <p className="text-xs">(Upload di sini)</p>
-                </div>
+                  className="w-64 h-80 md:w-80 md:h-96 lg:w-96 lg:h-[500px] rounded-3xl bg-white/10 backdrop-blur-sm border-2 border-white/20 overflow-hidden shadow-2xl"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <img 
+                    src="/Hero-Foto.png" // Ganti dengan nama file di folder public kamu
+                    alt="Raychana Maharani Zahra"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://placehold.co/600x800?text=Foto+Raychana";
+                    }}
+                  />
               </motion.div>
 
               {/* Decorative badge */}
