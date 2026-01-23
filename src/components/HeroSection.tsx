@@ -109,7 +109,8 @@ const HeroSection = () => {
               transition={{ delay: 0.6 }}
               className="text-white/90 font-body text-lg md:text-xl max-w-md mb-8 italic"
             >
-              "4 tahun bersamamu adalah perjalanan terbaik dalam hidupku."
+              Terus bersamamu adalah perjalanan terbaik dalam hidupku.<br />
+              Setelah ini kitaa bakal genap 4 tahun sayaanggg . . .
             </motion.p>
 
             {/* Countdown */}
@@ -177,8 +178,8 @@ const HeroSection = () => {
                 transition={{ delay: 0.8 }}
                 className="absolute -right-4 top-8 md:-right-8 bg-gold text-white px-4 py-2 rounded-lg shadow-lg"
               >
-                <p className="text-xs font-bold uppercase tracking-wider">Anniversary</p>
-                <p className="text-lg font-display font-bold">4 Tahun</p>
+                <p className="text-xs font-bold uppercase tracking-wider">LOVE U</p>
+                <p className="text-lg font-display font-bold">SAYANGKUUU</p>
               </motion.div>
 
               {/* Name badge */}
