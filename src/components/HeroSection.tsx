@@ -156,10 +156,10 @@ const HeroSection = () => {
             <div className="relative">
               {/* Photo container */}
               <motion.div
-                  className="w-120 h-160 md:w-80 md:h-96 lg:w-96 lg:h-[500px] rounded-3xl bg-white/10 backdrop-blur-sm border-2 border-white/20 overflow-hidden shadow-2xl"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
+                className="w-80 h-[450px] md:w-[450px] md:h-[550px] lg:w-[550px] lg:h-[700px] rounded-3xl bg-white/10 backdrop-blur-sm border-2 border-white/20 overflow-hidden shadow-2xl"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                   <img 
                     src="/Hero-Foto.png" // Ganti dengan nama file di folder public kamu
                     alt="Raychana Maharani Zahra"
