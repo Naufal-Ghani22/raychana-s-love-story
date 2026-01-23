@@ -17,7 +17,7 @@ const timelineData: TimelinePhase[] = [
     description: "Pertemuan pertama di SMA. Hanya karena kita satu divisi akhirnya bisa jadi satu ikatan. Utututu.. Timaaciii yaaa mau menerimaku dengan sangat tulus dan komitmen sampai sejauh ini.",
     icon: <GraduationCap size={24} />,
     accent: "from-rose-blush to-rose-soft",
-    imageUrl: "src/Photo-Tahun/Photo-2022.jpg",
+    imageUrl: "/src/Photo-Tahun/Photo-2022.jpg",
   },
   {
     year: "Tahun 2",
@@ -25,7 +25,7 @@ const timelineData: TimelinePhase[] = [
     description: "Tahun dimana aku sadar kehilangan kamu sudah seperti kehilangan setengah hidupku. Kamuuu satu satunyaaa oang yg bisa bikin aku sebucin ini sayaannggg<3",
     icon: <Sparkles size={24} />,
     accent: "from-lavender to-lavender-soft",
-    imageUrl: "src/Photo-Tahun/Photo-2023.jpg",
+    imageUrl: "/src/Photo-Tahun/Photo-2023.jpg",
   },
   {
     year: "Tahun 3",
@@ -33,7 +33,7 @@ const timelineData: TimelinePhase[] = [
     description: "Komitmen kita semakin kuwatt. Badai hujan deras angin ribut kita lalui bersama dan menjadi lebih dewasa. Cintaku ke kamuu tumbuh lebih dalam setiap harinya.",
     icon: <Star size={24} />,
     accent: "from-gold-soft to-cream",
-    imageUrl: "src/Photo-Tahun/Photo-2024.HEIC",
+    imageUrl: "/src/Photo-Tahun/Photo-2024.HEIC",
   },
   {
     year: "Tahun 4",
@@ -41,7 +41,7 @@ const timelineData: TimelinePhase[] = [
     description: "Tahun dimana kita sudah terbiasa dengan pertengkaran. Banyak cerita yang kita lalui bersama. Terima kasih telah menjadi bagian yg sangaatttt terindahh dalam hidupkuuu.",
     icon: <Heart size={24} />,
     accent: "from-rose-deep/20 to-primary/20",
-    imageUrl: "src/Photo-Tahun/Photo-2025.HEIC",
+    imageUrl: "/src/Photo-Tahun/Photo-2025.HEIC",
   },
   {
     year: "Masa Depan",
@@ -49,7 +49,7 @@ const timelineData: TimelinePhase[] = [
     description: "Komitmenku bakal selaluu kuatt  untuk membangun masa depan bersamamu. Aku ingin menghabiskan sisa hidupku denganmu, membangun rumah tangga yang penuh cinta, sejahtera, bahagia, dan masih banyak lagi.",
     icon: <Home size={24} />,
     accent: "from-primary/30 to-lavender/30",
-    imageUrl: "src/Photo-Tahun/Photo-MasaDepan.png",
+    imageUrl: "/src/Photo-Tahun/Photo-MasaDepan.png",
   },
 ];
 
