@@ -3,19 +3,19 @@ import { Heart, Quote } from "lucide-react";
 
 const quotes = [
   {
-    text: "Kamu adalah alasanku untuk tersenyum setiap pagi",
+    text: "Sepanjang hari hanya kamu yg kuingat untuk tujuan masa depanku",
     emoji: "🌅",
   },
   {
-    text: "Dalam setiap langkahku, ada kamu yang jadi kekuatanku",
+    text: "Tiap langkah dan usahaku, selalu tertuju untukmu",
     emoji: "💪",
   },
   {
-    text: "Rumah bukanlah tempat, tapi perasaan. Dan rumahku adalah bersamamu",
+    text: "Rumah tempat istirahatku, dalam segala keterbukaanku, adalah kamu",
     emoji: "🏠",
   },
   {
-    text: "Aku tidak mencari kesempurnaan, aku menemukan keindahan dalam dirimu",
+    text: "Kamu lebih dari sempurna sebagai pendamping hidupku",
     emoji: "✨",
   },
 ];
@@ -40,10 +40,10 @@ const QuotesSection = () => {
         >
           <Quote className="text-primary/30 mx-auto mb-4" size={48} />
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-            Kata-Kata Cinta
+            Love Letter
           </h2>
           <p className="text-muted-foreground font-body">
-            Ungkapan hati yang tidak bisa diucapkan dengan biasa
+            Ungkapan hati terdalam hanya untukmu
           </p>
         </motion.div>
 
@@ -75,7 +75,7 @@ const QuotesSection = () => {
               <motion.div className="flex items-center gap-2 mt-6">
                 <Heart size={16} className="text-rose-deep" fill="currentColor" />
                 <span className="text-sm text-muted-foreground font-body">
-                  Untukmu, Raychana
+                  Untuk ayaanggg
                 </span>
               </motion.div>
             </motion.div>
