@@ -6,7 +6,7 @@ import { useState } from "react";
 const photos = Array.from({ length: 50 }, (_, i) => ({
   id: i + 1,
   // Menggunakan penamaan file berurutan di folder public/Photo-Tahun
-  src: `/Photo-Tahun/kenangan-${i + 1}.jpg`, 
+  src: `/Photo-Gallery/foto-${i + 1}.jpg`, 
 }));
 
 const GallerySection = () => {
