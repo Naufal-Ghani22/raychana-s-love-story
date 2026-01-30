@@ -104,10 +104,10 @@ const HopesSection = () => {
           </motion.div>
           
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-            Tulis Harapanmu
+            Tulis Doa dan Harapan
           </h2>
           <p className="text-muted-foreground font-body max-w-xl mx-auto">
-            Sayang, tuliskan harapan dan doa-doamu di sini. Aku akan membacanya dengan sepenuh hati.
+            Tulis harapan dan doa kamu disini yaaa sayaanggkuuuu
           </p>
         </motion.div>
 
