@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Heart, Image as ImageIcon } from "lucide-react";
+import { Heart } from "lucide-react";
 import { useState } from "react";
 
-// Data 50 foto dari folder public/Photo-Tahun
+// 1. Data 50 foto dengan path: /Photo-Gallery/foto-x.jpg
 const photos = Array.from({ length: 50 }, (_, i) => ({
   id: i + 1,
-  src: `/Photo-Tahun/kenangan-${i + 1}.jpg`, 
+  src: `/Photo-Gallery/foto-${i + 1}.jpg`, 
 }));
 
 const GallerySection = () => {
@@ -38,7 +38,7 @@ const GallerySection = () => {
             <button
               onClick={() => setActiveView("slider")}
               className={`px-4 py-2 rounded-full text-sm font-body transition-all duration-300 ${
-                activeView === "slider" ? "bg-primary text-primary-foreground" : "bg-rose-soft text-foreground"
+                activeView === "slider" ? "bg-primary text-primary-foreground shadow-md" : "bg-rose-soft text-foreground"
               }`}
             >
               Auto Slider
@@ -46,7 +46,7 @@ const GallerySection = () => {
             <button
               onClick={() => setActiveView("grid")}
               className={`px-4 py-2 rounded-full text-sm font-body transition-all duration-300 ${
-                activeView === "grid" ? "bg-primary text-primary-foreground" : "bg-rose-soft text-foreground"
+                activeView === "grid" ? "bg-primary text-primary-foreground shadow-md" : "bg-rose-soft text-foreground"
               }`}
             >
               Grid View
@@ -54,9 +54,10 @@ const GallerySection = () => {
           </div>
         </motion.div>
 
-        {/* Infinite Auto-Scroll Slider */}
+        {/* 5 BARIS AUTO SLIDER SESUAI REQUES */}
         {activeView === "slider" && (
           <div className="relative space-y-4">
+            {/* Baris 1 - Kiri ke Kanan */}
             <div className="overflow-hidden">
               <motion.div className="flex gap-4" animate={{ x: [0, "-50%"] }} transition={{ x: { repeat: Infinity, duration: 30, ease: "linear" } }}>
                 {duplicatedPhotos.slice(0, 20).map((photo, index) => (
@@ -64,15 +65,46 @@ const GallerySection = () => {
                 ))}
               </motion.div>
             </div>
+            {/* Baris 2 - Kanan ke Kiri */}
+            <div className="overflow-hidden">
+              <motion.div className="flex gap-4" animate={{ x: ["-50%", 0] }} transition={{ x: { repeat: Infinity, duration: 35, ease: "linear" } }}>
+                {duplicatedPhotos.slice(10, 30).map((photo, index) => (
+                  <PhotoCard key={`row2-${index}`} src={photo.src} id={photo.id} />
+                ))}
+              </motion.div>
+            </div>
+            {/* Baris 3 - Kiri ke Kanan */}
+            <div className="overflow-hidden">
+              <motion.div className="flex gap-4" animate={{ x: [0, "-50%"] }} transition={{ x: { repeat: Infinity, duration: 40, ease: "linear" } }}>
+                {duplicatedPhotos.slice(20, 40).map((photo, index) => (
+                  <PhotoCard key={`row3-${index}`} src={photo.src} id={photo.id} />
+                ))}
+              </motion.div>
+            </div>
+            {/* Baris 4 - Kanan ke Kiri */}
+            <div className="overflow-hidden">
+              <motion.div className="flex gap-4" animate={{ x: ["-50%", 0] }} transition={{ x: { repeat: Infinity, duration: 32, ease: "linear" } }}>
+                {duplicatedPhotos.slice(5, 25).map((photo, index) => (
+                  <PhotoCard key={`row4-${index}`} src={photo.src} id={photo.id} />
+                ))}
+              </motion.div>
+            </div>
+            {/* Baris 5 - Kiri ke Kanan */}
+            <div className="overflow-hidden">
+              <motion.div className="flex gap-4" animate={{ x: [0, "-50%"] }} transition={{ x: { repeat: Infinity, duration: 38, ease: "linear" } }}>
+                {duplicatedPhotos.slice(15, 35).map((photo, index) => (
+                  <PhotoCard key={`row5-${index}`} src={photo.src} id={photo.id} />
+                ))}
+              </motion.div>
+            </div>
           </div>
         )}
 
-        {/* GRID VIEW - KEMBALI KE TATA LETAK SEMULA */}
+        {/* Grid View (2-5 Kolom) */}
         {activeView === "grid" && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4"
           >
             {photos.map((photo, index) => (
@@ -115,7 +147,7 @@ const PhotoCard = ({ src, id, isGrid = false }: PhotoCardProps) => {
         src={src} 
         alt={`Kenangan ${id}`} 
         className="w-full h-full object-cover" 
-        onError={(e) => { e.currentTarget.src = "https://placehold.co/400x400?text=Foto+Kenangan"; }}
+        onError={(e) => { e.currentTarget.src = "https://placehold.co/400x400?text=Foto+Kenangan"; }} 
       />
       <motion.div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0" whileHover={{ opacity: 1 }} />
     </motion.div>
