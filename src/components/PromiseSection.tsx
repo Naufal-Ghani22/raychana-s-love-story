@@ -11,18 +11,18 @@ interface PromiseItem {
 const promises: PromiseItem[] = [
   {
     icon: Shield,
-    title: "Menjagamu",
-    description: "Aku berjanji akan selalu menjagamu dan melindungimu",
+    title: "Memberi Rasa Aman",
+    description: "Aku pastikan kamu bakal ngerasa aman bersamaku yaahhh",
   },
   {
     icon: Heart,
-    title: "Mencintaimu",
-    description: "Cintaku padamu tidak akan pernah pudar oleh waktu",
+    title: "Cinta yg Hangat",
+    description: "Tiap versi kita kedepannya tak boleh padam sedikitpun!",
   },
   {
     icon: Home,
     title: "Membangun Rumah Tangga",
-    description: "Bersama kita akan membangun rumah tangga yang bahagia",
+    description: "Bersama membangun kehidupan yang kita impikan",
   },
   {
     icon: Repeat,
