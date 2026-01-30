@@ -4,38 +4,38 @@ import { Heart, Star, Sparkles, Crown, Gem, Gift } from "lucide-react";
 const criteriaItems = [
   {
     icon: Heart,
-    title: "Kesetiaan",
-    description: "Kamu selalu ada untukku di saat susah maupun senang",
+    title: "Setia",
+    description: "Tak pernah ada kata selingkuh atau orang ke-3 diantara kita",
     color: "text-rose-deep",
   },
   {
     icon: Star,
     title: "Pengertian",
-    description: "Kamu selalu mengerti keadaanku tanpa perlu aku jelaskan",
+    description: "Selalu memahami keadaan satu sama lain",
     color: "text-gold",
   },
   {
     icon: Sparkles,
     title: "Kasih Sayang",
-    description: "Setiap sentuhan dan kata-katamu penuh dengan cinta",
+    description: "Rasa sayang tiada tara yg terus berkembang tiap detiknya",
     color: "text-primary",
   },
   {
     icon: Crown,
-    title: "Kebanggaan",
-    description: "Kamu adalah wanita yang membuatku bangga setiap hari",
+    title: "Loyal",
+    description: "Setiap kepemilikan kita, selalu dikerahkan untuk kebaikan bersama",
     color: "text-accent",
   },
   {
     icon: Gem,
-    title: "Berharga",
-    description: "Kamu adalah permata terindah dalam hidupku",
+    title: "My Pride",
+    description: "Permata terindah dalam hidupku yang sampai saat ini aku miliki",
     color: "text-lavender",
   },
   {
     icon: Gift,
     title: "Anugerah",
-    description: "Kehadiranmu adalah hadiah terbaik dari Tuhan",
+    description: "Kehadiranmu adalah hadiah terbaik dari-Nya",
     color: "text-rose-deep",
   },
 ];
@@ -76,14 +76,14 @@ const LoveCriteriaSection = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-body tracking-wider mb-4">
-            MENGAPA AKU MENCINTAIMU
+            SAMPAI DETIK INI
           </span>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
             Kriteria Cinta Kita
           </h2>
           <p className="text-muted-foreground font-body max-w-2xl mx-auto">
             Setiap hari bersamamu mengajarkanku arti cinta yang sesungguhnya.
-            Ini adalah alasan mengapa kamu begitu berharga bagiku.
+            Rasa yang terus berkembang dan beradaptasi untuk masa depan.
           </p>
         </motion.div>
 
@@ -131,7 +131,7 @@ const LoveCriteriaSection = () => {
           transition={{ delay: 0.5 }}
           className="text-center text-muted-foreground font-body italic mt-12"
         >
-          ✨ Dan masih banyak lagi alasan yang tidak bisa kusebutkan satu per satu...
+          ✨ Dan masih banyak lagi kriteria yang tidak bisa kusebutkan satu per satu...
         </motion.p>
       </div>
     </section>
