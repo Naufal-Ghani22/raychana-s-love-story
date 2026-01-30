@@ -6,22 +6,22 @@ import { Button } from "./ui/button";
 const specialMessages = [
   {
     title: "Pesan Pertama",
-    content: "Klik untuk membaca pesan spesial dariku...",
+    content: "I LOVE U SOOOOO MUCHHH MY ONLY GIRL, MY LOVE, MY HEART, MY HOME, MY EVERYTHING",
     icon: "💌",
   },
   {
     title: "Pesan Kedua",
-    content: "Klik untuk membaca pesan spesial dariku...",
+    content: "Maaff yaaa kalau selama ini aku beribu salah ke kamu, semoga kamu tak lelah menerima maafku sampai kapanpun. Jangan emosi berlebih yaaa kalo kita lagi tengkar. Aku orangnyaa penurut kok:')",
     icon: "💕",
   },
   {
     title: "Pesan Ketiga",
-    content: "Klik untuk membaca pesan spesial dariku...",
+    content: "AKU BANGGAA KAMU MAU BERTAHAN SAMA AKU SAMPAI DETIK INI, aku adaaa hadiah buat kamuuu sayaanggkuuu",
     icon: "💖",
   },
   {
     title: "Pesan Rahasia",
-    content: "Klik untuk membaca pesan spesial dariku...",
+    content: "CONGRATSS AKU KASIH KAMU KESEMPATAN BELANJA 500rb yaaa. Kamu boleh pilih hadiahmu sesuka hati buat minggu depan sayaanggg. Maaff yaaa kalau belum bisa sebanyak cowo diluar sana:( Aku harap kamuu happyyy sayaangg",
     icon: "🤫",
   },
 ];
