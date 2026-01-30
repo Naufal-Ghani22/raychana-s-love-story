@@ -2,17 +2,14 @@ import { motion } from "framer-motion";
 import { Heart, Image as ImageIcon } from "lucide-react";
 import { useState } from "react";
 
-// 1. Generate Data Foto (Pastikan fungsi ini me-return array)
+// Data 50 foto dari folder public/Photo-Tahun
 const photos = Array.from({ length: 50 }, (_, i) => ({
   id: i + 1,
-  // Menggunakan penamaan file berurutan di folder public/Photo-Tahun
-  src: `/Photo-Gallery/foto-${i + 1}.jpg`, 
+  src: `/Photo-Tahun/kenangan-${i + 1}.jpg`, 
 }));
 
 const GallerySection = () => {
   const [activeView, setActiveView] = useState<"slider" | "grid">("slider");
-
-  // Duplikasi foto untuk efek infinite scroll yang mulus
   const duplicatedPhotos = [...photos, ...photos];
 
   return (
@@ -37,24 +34,19 @@ const GallerySection = () => {
             <div className="h-px w-16 bg-primary/30" />
           </div>
 
-          {/* View Toggle */}
           <div className="flex justify-center gap-2">
             <button
               onClick={() => setActiveView("slider")}
-              className={`px-6 py-2 rounded-full text-sm font-body transition-all duration-300 ${
-                activeView === "slider"
-                  ? "bg-primary text-primary-foreground shadow-lg"
-                  : "bg-rose-soft text-foreground hover:bg-rose-blush"
+              className={`px-4 py-2 rounded-full text-sm font-body transition-all duration-300 ${
+                activeView === "slider" ? "bg-primary text-primary-foreground" : "bg-rose-soft text-foreground"
               }`}
             >
               Auto Slider
             </button>
             <button
               onClick={() => setActiveView("grid")}
-              className={`px-6 py-2 rounded-full text-sm font-body transition-all duration-300 ${
-                activeView === "grid"
-                  ? "bg-primary text-primary-foreground shadow-lg"
-                  : "bg-rose-soft text-foreground hover:bg-rose-blush"
+              className={`px-4 py-2 rounded-full text-sm font-body transition-all duration-300 ${
+                activeView === "grid" ? "bg-primary text-primary-foreground" : "bg-rose-soft text-foreground"
               }`}
             >
               Grid View
@@ -65,44 +57,23 @@ const GallerySection = () => {
         {/* Infinite Auto-Scroll Slider */}
         {activeView === "slider" && (
           <div className="relative space-y-4">
-            {/* Baris 1 - Kiri ke Kanan */}
             <div className="overflow-hidden">
-              <motion.div
-                className="flex gap-4"
-                animate={{ x: [0, "-50%"] }}
-                transition={{
-                  x: { repeat: Infinity, duration: 40, ease: "linear" },
-                }}
-              >
-                {duplicatedPhotos.slice(0, 40).map((photo, index) => (
+              <motion.div className="flex gap-4" animate={{ x: [0, "-50%"] }} transition={{ x: { repeat: Infinity, duration: 30, ease: "linear" } }}>
+                {duplicatedPhotos.slice(0, 20).map((photo, index) => (
                   <PhotoCard key={`row1-${index}`} src={photo.src} id={photo.id} />
-                ))}
-              </motion.div>
-            </div>
-
-            {/* Baris 2 - Kanan ke Kiri */}
-            <div className="overflow-hidden">
-              <motion.div
-                className="flex gap-4"
-                animate={{ x: ["-50%", 0] }}
-                transition={{
-                  x: { repeat: Infinity, duration: 45, ease: "linear" },
-                }}
-              >
-                {duplicatedPhotos.slice(20, 60).map((photo, index) => (
-                  <PhotoCard key={`row2-${index}`} src={photo.src} id={photo.id} />
                 ))}
               </motion.div>
             </div>
           </div>
         )}
 
-        {/* Grid View */}
+        {/* GRID VIEW - KEMBALI KE TATA LETAK SEMULA */}
         {activeView === "grid" && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4"
           >
             {photos.map((photo, index) => (
               <motion.div
@@ -122,7 +93,6 @@ const GallerySection = () => {
   );
 };
 
-// 2. Definisi Komponen PhotoCard (Hanya satu versi yang benar)
 interface PhotoCardProps {
   src: string;
   id: number;
@@ -132,37 +102,22 @@ interface PhotoCardProps {
 const PhotoCard = ({ src, id, isGrid = false }: PhotoCardProps) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.05, rotate: isGrid ? 0 : 2 }}
+      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.98 }}
       className={`
-        relative flex-shrink-0 rounded-2xl overflow-hidden cursor-pointer
-        bg-rose-soft border-2 border-white/50 shadow-sm
-        ${isGrid ? "aspect-square" : "w-48 h-48 md:w-60 md:h-60"}
-        transition-all duration-300 hover:shadow-xl hover:shadow-primary/20
+        relative flex-shrink-0 rounded-xl overflow-hidden cursor-pointer
+        bg-rose-soft border border-primary/10
+        ${isGrid ? "aspect-square" : "w-48 h-48 md:w-56 md:h-56"}
+        transition-shadow duration-300 hover:shadow-xl hover:shadow-primary/20
       `}
     >
-      {/* Gambar Asli */}
       <img 
         src={src} 
-        alt={`Kenangan ${id}`}
-        className="w-full h-full object-cover"
-        loading="lazy"
-        onError={(e) => {
-          // Placeholder jika gambar belum ada
-          e.currentTarget.src = "https://placehold.co/400x400?text=Memories+💕";
-        }}
+        alt={`Kenangan ${id}`} 
+        className="w-full h-full object-cover" 
+        onError={(e) => { e.currentTarget.src = "https://placehold.co/400x400?text=Foto+Kenangan"; }}
       />
-      
-      {/* Overlay Glow saat Hover */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0"
-        whileHover={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        <div className="absolute bottom-3 left-3 text-white text-[10px] font-bold uppercase tracking-widest opacity-80">
-          Kenangan #{id}
-        </div>
-      </motion.div>
+      <motion.div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0" whileHover={{ opacity: 1 }} />
     </motion.div>
   );
 };
